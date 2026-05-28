@@ -16,37 +16,41 @@
            CSS VARIABLES & RESET
         ============================================ */
         :root {
-            /* Colors */
-            --primary-blue: #2563eb;
-            --primary-blue-dark: #1d4ed8;
-            --primary-blue-light: #3b82f6;
-            --accent-blue: #0ea5e9;
-            --dark-blue: #1e3a5f;
-            --navy: #0f172a;
-            
+            /* Premium Finance Theme Colors */
+            --primary-blue: #0f4c81;
+            --primary-blue-dark: #0b3558;
+            --primary-blue-light: #2563eb;
+            --accent-blue: #14b8a6;
+            --dark-blue: #0a2540;
+            --navy: #071a2e;
+
+            --gold: #f59e0b;
+            --gold-dark: #d97706;
+            --emerald: #10b981;
+
             --white: #ffffff;
             --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
+            --gray-100: #eef2f7;
+            --gray-200: #dbe4ee;
+            --gray-300: #c0cedd;
             --gray-400: #94a3b8;
             --gray-500: #64748b;
             --gray-600: #475569;
             --gray-700: #334155;
             --gray-800: #1e293b;
             --gray-900: #0f172a;
-            
+
             --success: #10b981;
             --warning: #f59e0b;
-            
+
             /* Shadows */
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-            --shadow-blue: 0 10px 40px -10px rgba(37, 99, 235, 0.4);
-            
+            --shadow-lg: 0 10px 20px -4px rgb(0 0 0 / 0.12);
+            --shadow-xl: 0 20px 30px -6px rgb(0 0 0 / 0.15);
+            --shadow-2xl: 0 30px 60px -12px rgb(0 0 0 / 0.25);
+            --shadow-blue: 0 12px 40px -10px rgba(15, 76, 129, 0.45);
+
             /* Typography */
             --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             
@@ -159,7 +163,7 @@
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -265,7 +269,7 @@
         .logo-icon {
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
@@ -306,7 +310,7 @@
             display: flex;
             align-items: center;
             padding: 140px 0 100px;
-            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%);
             overflow: hidden;
         }
 
@@ -388,7 +392,7 @@
         .hero-title {
             font-size: clamp(40px, 7vw, 72px);
             font-weight: 800;
-            color: var(--gray-900);
+            color: var(--white);
             line-height: 1.1;
             margin-bottom: 24px;
             letter-spacing: -0.03em;
@@ -397,7 +401,7 @@
 
         .hero-subtitle {
             font-size: clamp(18px, 2.5vw, 22px);
-            color: var(--gray-500);
+            color: rgba(255,255,255,0.82);
             line-height: 1.6;
             margin-bottom: 40px;
             animation: fadeInUp 0.6s ease 0.2s both;
@@ -430,13 +434,13 @@
         .hero-stat-value {
             font-size: 32px;
             font-weight: 800;
-            color: var(--gray-900);
+            color: var(--white);
             letter-spacing: -0.02em;
         }
 
         .hero-stat-label {
             font-size: 14px;
-            color: var(--gray-500);
+            color: rgba(255,255,255,0.75);
             margin-top: 4px;
         }
 
@@ -580,7 +584,7 @@
            SERVICES SECTION
         ============================================ */
         .services {
-            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%);
         }
 
         .services-grid {
@@ -617,7 +621,7 @@
             top: 16px;
             right: -32px;
             padding: 6px 40px;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
             color: var(--white);
             font-size: 11px;
             font-weight: 600;
@@ -640,7 +644,7 @@
         }
 
         .service-card:hover .service-icon {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
             color: var(--white);
             transform: scale(1.05);
         }
@@ -731,7 +735,7 @@
             width: 48px;
             height: 48px;
             margin: 0 auto 24px;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -795,7 +799,7 @@
            LEAD FORM SECTION
         ============================================ */
         .lead-form-section {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 100%);
+            background: linear-gradient(135deg, #071a2e 0%, #0f4c81 55%, #14b8a6 100%);
             position: relative;
             overflow: hidden;
         }
@@ -993,7 +997,7 @@
         }
 
         .footer-logo .logo-icon {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
         }
 
         .footer-logo .logo-primary {
@@ -1092,6 +1096,554 @@
             0%, 100% { box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.5); }
             50% { box-shadow: 0 8px 32px -4px rgba(37, 211, 102, 0.7); }
         }
+
+        
+        
+        .service-card,
+        .trust-card,
+        .contact-card {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .service-card:hover,
+        .trust-card:hover,
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 24px 50px -12px rgba(15, 76, 129, 0.22);
+        }
+
+        .hero-title {
+            text-shadow: 0 4px 18px rgba(15, 76, 129, 0.08);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0f4c81 0%, #14b8a6 100%);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0b3558 0%, #0f766e 100%);
+        }
+
+        .section-badge {
+            background: linear-gradient(135deg, rgba(15, 76, 129, 0.12) 0%, rgba(20, 184, 166, 0.12) 100%);
+        }
+
+        .navbar {
+            border-bottom: 1px solid rgba(15, 76, 129, 0.08);
+        }
+
+
+        
+        
+        .hero::before {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(20, 184, 166, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 80% 80%, rgba(15, 76, 129, 0.35) 0%, transparent 50%);
+        }
+
+        .hero-badge {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.9);
+            backdrop-filter: blur(14px);
+        }
+
+        .hero-stats {
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .navbar {
+            background: rgba(7, 26, 46, 0.75);
+        }
+
+        .navbar.scrolled {
+            background: rgba(7, 26, 46, 0.94);
+        }
+
+        .logo-primary,
+        .logo-secondary,
+        .navbar .btn {
+            color: white;
+        }
+
+        .services {
+            background: linear-gradient(180deg, #f4f8fb 0%, #ffffff 100%);
+        }
+
+
+        
+        
+        /* ============================================
+           3D PREMIUM EFFECTS
+        ============================================ */
+
+        body {
+            perspective: 1200px;
+            background: #071a2e;
+        }
+
+        .hero,
+        .services,
+        .trust,
+        .contact,
+        .how-it-works {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top right, rgba(20,184,166,0.18), transparent 35%),
+                radial-gradient(circle at bottom left, rgba(37,99,235,0.18), transparent 40%);
+            pointer-events: none;
+        }
+
+        .service-card,
+        .trust-card,
+        .contact-card,
+        .lead-form,
+        .step-icon {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .service-card:hover,
+        .trust-card:hover,
+        .contact-card:hover {
+            transform: rotateX(8deg) rotateY(-8deg) translateY(-12px) scale(1.02);
+            box-shadow:
+                0 30px 60px rgba(0,0,0,0.35),
+                0 0 35px rgba(20,184,166,0.18);
+        }
+
+        .step:hover .step-icon {
+            transform: rotateY(18deg) rotateX(8deg) scale(1.08);
+            box-shadow: 0 18px 40px rgba(15,76,129,0.4);
+        }
+
+        .hero-content {
+            transform-style: preserve-3d;
+            animation: floatHero 6s ease-in-out infinite;
+        }
+
+        @keyframes floatHero {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -120%;
+            left: -40%;
+            width: 60%;
+            height: 320%;
+            background: rgba(255,255,255,0.18);
+            transform: rotate(25deg);
+            transition: all 0.7s ease;
+        }
+
+        .btn:hover::before {
+            left: 120%;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        .navbar {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        .hero-title {
+            text-shadow:
+                0 4px 10px rgba(0,0,0,0.25),
+                0 0 18px rgba(20,184,166,0.18);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .service-card::after,
+        .trust-card::after,
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(
+                135deg,
+                rgba(255,255,255,0.08),
+                transparent 40%,
+                rgba(20,184,166,0.06)
+            );
+            pointer-events: none;
+        }
+
+        .lead-form {
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.35),
+                0 0 30px rgba(20,184,166,0.12);
+        }
+
+        .whatsapp-float {
+            animation: floatWhatsapp 3s ease-in-out infinite;
+        }
+
+        @keyframes floatWhatsapp {
+            0%,100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+
+
+        
+
+        /* ============================================
+           ADVANCED SCROLL ANIMATIONS
+        ============================================ */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(70px) scale(0.96);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .service-card,
+        .trust-card,
+        .step,
+        .contact-card,
+        .lead-form-wrapper {
+            opacity: 0;
+            transform: translateY(70px);
+            transition: all 0.9s ease;
+        }
+
+        .service-card.active,
+        .trust-card.active,
+        .step.active,
+        .contact-card.active,
+        .lead-form-wrapper.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card:hover,
+        .trust-card:hover,
+        .contact-card:hover {
+            transform: rotateX(8deg) rotateY(-8deg) translateY(-12px) scale(1.02);
+        }
+
+        .parallax-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(20,184,166,0.15), transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: floatParallax 10s ease-in-out infinite;
+        }
+
+        @keyframes floatParallax {
+            0%,100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+
+
+        
+        
+        
+        
+        /* ============================================
+           ABOUT US SECTION
+        ============================================ */
+
+        .about-us {
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-us .section-title,
+        .about-us .section-subtitle {
+            color: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .about-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: all 0.5s ease;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+        }
+
+        .about-icon {
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+        .about-card h3 {
+            font-size: 24px;
+            margin-bottom: 14px;
+            color: #ffffff;
+        }
+
+        .about-card p {
+            color: rgba(255,255,255,0.82);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        
+
+        /* ============================================
+           SERVICE CARD ALIGNMENT FIX
+        ============================================ */
+
+        .services-grid {
+            align-items: stretch;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 500px;
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%);
+        }
+
+        .service-btn {
+            margin-top: auto;
+        }
+
+        .service-name,
+        .service-description,
+        .service-price,
+        .service-price-note,
+        .service-price-value,
+        .service-price-currency {
+            color: white !important;
+        }
+
+        .trust,
+        .services,
+        .how-it-works,
+        .contact,
+        .about-us {
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%) !important;
+        }
+
+        .trust .section-title,
+        .services .section-title,
+        .how-it-works .section-title,
+        .contact .section-title,
+        .trust .section-subtitle,
+        .services .section-subtitle,
+        .how-it-works .section-subtitle,
+        .contact .section-subtitle {
+            color: white !important;
+        }
+
+
+
+        
+
+        /* ============================================
+           CONTRAST SECTION DESIGN
+        ============================================ */
+
+        .trust {
+            background: #f4f7fb !important;
+        }
+
+        .services {
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%) !important;
+        }
+
+        .how-it-works {
+            background: #f4f7fb !important;
+        }
+
+        .about-us {
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%) !important;
+        }
+
+        .contact {
+            background: #f4f7fb !important;
+        }
+
+        .trust .section-title,
+        .how-it-works .section-title,
+        .contact .section-title {
+            color: #0f172a !important;
+        }
+
+        .trust .section-subtitle,
+        .how-it-works .section-subtitle,
+        .contact .section-subtitle {
+            color: #475569 !important;
+        }
+
+        .step-title,
+        .step-description,
+        .contact-title,
+        .contact-info,
+        .trust-card-label {
+            color: #1e293b !important;
+        }
+
+        .step {
+            background: white;
+            border-radius: 24px;
+            padding: 30px 20px;
+            box-shadow: 0 15px 35px rgba(15,76,129,0.08);
+        }
+
+        .contact-card,
+        .trust-card {
+            background: white !important;
+            box-shadow: 0 20px 40px rgba(15,76,129,0.08);
+        }
+
+
+
+        
+
+        /* ============================================
+           PREMIUM WHITE SECTION CONTRAST
+        ============================================ */
+
+        body {
+            background: #071a2e !important;
+        }
+
+        .trust,
+        .services,
+        .how-it-works,
+        .about-us,
+        .contact {
+            background: transparent !important;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .trust .container,
+        .services .container,
+        .how-it-works .container,
+        .about-us .container,
+        .contact .container {
+            background: white;
+            border-radius: 36px;
+            padding: 70px 50px;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+        }
+
+        .trust .section-title,
+        .services .section-title,
+        .how-it-works .section-title,
+        .about-us .section-title,
+        .contact .section-title {
+            color: #0f172a !important;
+        }
+
+        .trust .section-subtitle,
+        .services .section-subtitle,
+        .how-it-works .section-subtitle,
+        .about-us .section-subtitle,
+        .contact .section-subtitle {
+            color: #475569 !important;
+        }
+
+        .step {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(15,76,129,0.08);
+        }
+
+        .service-card {
+            background: linear-gradient(180deg, #071a2e 0%, #0f4c81 100%) !important;
+        }
+
+        .contact-card,
+        .trust-card,
+        .about-card {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 12px 28px rgba(15,76,129,0.08);
+        }
+
+        .about-card h3,
+        .about-card p {
+            color: #0f172a !important;
+        }
+
+        @media (max-width: 768px) {
+            .trust .container,
+            .services .container,
+            .how-it-works .container,
+            .about-us .container,
+            .contact .container {
+                padding: 50px 24px;
+                border-radius: 24px;
+            }
+        }
+
+
 
         /* ============================================
            RESPONSIVE DESIGN
@@ -1343,6 +1895,9 @@
         </div>
     </section>
 
+    
+
+
     <!-- ============================================
          SERVICES SECTION
     ============================================ -->
@@ -1361,14 +1916,13 @@
             
             <div class="services-grid">
                 <div class="service-card featured">
-                    <div class="service-icon">
-                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                    </div>
+                    
+
+
                     <h3 class="service-name">Salaried ITR Filing</h3>
                     <p class="service-description">For salaried employees with Form 16. Quick & hassle-free.</p>
                     <div class="service-price">
+                        <span class="service-price-note">Starting from</span>
                         <span class="service-price-currency">₹</span>
                         <span class="service-price-value">499</span>
                     </div>
@@ -1376,14 +1930,13 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                    </div>
+                    
+
+
                     <h3 class="service-name">Business ITR Filing</h3>
                     <p class="service-description">For freelancers, professionals & business owners.</p>
                     <div class="service-price">
+                        <span class="service-price-note">Starting from</span>
                         <span class="service-price-currency">₹</span>
                         <span class="service-price-value">749</span>
                     </div>
@@ -1391,14 +1944,13 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z" />
-                        </svg>
-                    </div>
+                    
+
+
                     <h3 class="service-name">GSTR Filing</h3>
                     <p class="service-description">Monthly GST return filing for businesses.</p>
                     <div class="service-price">
+                        <span class="service-price-note">Starting from</span>
                         <span class="service-price-currency">₹</span>
                         <span class="service-price-value">499</span>
                     </div>
@@ -1406,11 +1958,9 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
+                    
+
+
                     <h3 class="service-name">Refund Cases</h3>
                     <p class="service-description">Get your maximum refund with expert handling.</p>
                     <div class="service-price">
@@ -1418,7 +1968,29 @@
                     </div>
                     <a href="#lead-form" class="btn btn-primary service-btn">Get Started</a>
                 </div>
-            </div>
+            
+                <div class="service-card">
+                    
+
+
+                    <h3 class="service-name">Project Reports for Loans</h3>
+                    <p class="service-description">
+                        Bank-ready project reports for Mudra Loan, CC Limit, OD Limit, MSME Loan & Term Loan applications.
+                    </p>
+                    <div class="service-price">
+                        <span class="service-price-currency">₹</span>
+                        <span class="service-price-note">Starting from</span>
+                        <span class="service-price-value">999</span>
+                        <span class="service-price-note">/- only</span>
+                    </div>
+                    <a href="#project-report-form"
+                       class="btn btn-primary service-btn"
+                       target="_blank">
+                       Get Started
+                    </a>
+                </div>
+
+</div>
         </div>
     </section>
 
@@ -1447,12 +2019,27 @@
                         </svg>
                     </div>
                     <h3 class="step-title">Upload Documents</h3>
-                    <p class="step-description">Simply upload your documents through the ITReturn1 App.</p>
+
+                    <p class="step-description">
+                        Upload your documents through the ITReturn1 App or directly send your documents on WhatsApp.
+                    </p>
+
                     <div class="step-highlight">
-                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                        ITReturn1 App
+                        <a href="https://wa.me/919256551568?text=Hello%20I%20want%20to%20send%20my%20documents"
+                           target="_blank"
+                           style="display:flex;align-items:center;gap:8px;color:inherit;text-decoration:none;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 24 24"
+                                 fill="currentColor"
+                                 width="18"
+                                 height="18">
+
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                            </svg>
+
+                            Send Documents on WhatsApp
+                        </a>
                     </div>
                 </div>
                 
@@ -1558,6 +2145,134 @@
             </div>
         </div>
     </section>
+
+    <!-- ============================================
+         PROJECT REPORT FORM SECTION
+    ============================================ -->
+    <section class="section lead-form-section" id="project-report-form">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--white);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Loan Project Reports
+                </span>
+
+                <h2 class="section-title">Apply for Project Report</h2>
+
+                <p class="section-subtitle">
+                    Get bank-ready project reports starting from ₹999/- only.
+                </p>
+            </div>
+
+            <div class="lead-form-wrapper">
+                <form class="lead-form" id="projectReportForm">
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label class="form-label" for="prname">Full Name</label>
+                            <input type="text" id="prname" name="prname" class="form-input"
+                                   placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="prmobile">Mobile Number</label>
+                            <input type="tel" id="prmobile" name="prmobile" class="form-input"
+                                   placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label class="form-label" for="premail">Email Address (Optional)</label>
+                            <input type="email" id="premail" name="premail" class="form-input"
+                                   placeholder="Enter your email">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label class="form-label" for="projectType">Project Report Type</label>
+
+                            <select id="projectType" name="projectType" class="form-select" required>
+                                <option value="" disabled selected>Select Project Report Type</option>
+                                <option value="Commercial Vehicle">Commercial Vehicle</option>
+                                <option value="Mudra Term Loan">Mudra Term Loan</option>
+                                <option value="Mudra Over Draft">Mudra Over Draft</option>
+                                <option value="General Cash Credit">General Cash Credit</option>
+                                <option value="Not Sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-whatsapp btn-lg form-submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Submit & Connect on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         ABOUT US SECTION
+    ============================================ -->
+    <section class="section about-us" id="about-us">
+        <div class="container">
+
+            <div class="section-header">
+                <span class="section-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    About Us
+                </span>
+
+                <h2 class="section-title">
+                    Trusted Financial & Loan Consultancy Experts
+                </h2>
+
+                <p class="section-subtitle">
+                    Finsavvy Consultancy provides professional services in Income Tax Filing,
+                    GST Return Filing, Loan Project Reports, MSME Documentation and Financial Consultancy.
+                </p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-card">
+                    <div class="about-icon">💼</div>
+                    <h3>Professional Consultancy</h3>
+                    <p>
+                        Expert consultancy services for Income Tax, GST, Mudra Loans,
+                        OD/CC Limits and business financial documentation.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">📄</div>
+                    <h3>Bank-Ready Reports</h3>
+                    <p>
+                        Detailed project reports prepared as per bank requirements
+                        for faster loan processing and approvals.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">⚡</div>
+                    <h3>Quick Support</h3>
+                    <p>
+                        Fast response, transparent communication and dedicated
+                        customer support for all your financial service needs.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
 
     <!-- ============================================
          CONTACT SECTION
@@ -1801,5 +2516,47 @@ Please connect with me.`;
         });
     </script>
 
+
+<script>
+document.getElementById('projectReportForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('prname').value;
+    const mobile = document.getElementById('prmobile').value;
+    const email = document.getElementById('premail').value;
+    const projectType = document.getElementById('projectType').value;
+
+    const message = `Hello Finsavvy Consultancy,%0A%0AI want a Project Report for Loan.%0A%0AFull Name: ${name}%0AMobile Number: ${mobile}%0AEmail: ${email}%0AProject Report Type: ${projectType}`;
+
+    window.open(`https://wa.me/919256551568?text=${message}`, '_blank');
+});
+</script>
+
+<script>
+
+const revealElements = document.querySelectorAll(
+    '.service-card, .trust-card, .step, .contact-card, .lead-form-wrapper, .reveal'
+);
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    revealElements.forEach((el, index) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 80) {
+            setTimeout(() => {
+                el.classList.add('active');
+            }, index * 80);
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+</script>
 </body>
+
+
 </html>
