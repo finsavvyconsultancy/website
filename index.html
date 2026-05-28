@@ -273,24 +273,6 @@
             color: var(--white);
             font-weight: 800;
             font-size: 18px;
-            overflow: hidden;
-        }
-
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: var(--radius-md);
-        }
-
-        .logo-icon .logo-fallback {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            font-weight: 800;
-            font-size: 18px;
         }
 
         .logo-text {
@@ -379,16 +361,15 @@
             align-items: center;
             gap: 8px;
             padding: 10px 20px;
-            background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(14,165,233,0.08) 100%);
-            border: 1px solid rgba(37, 99, 235, 0.25);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
             border-radius: var(--radius-full);
             font-size: 14px;
-            font-weight: 600;
-            color: var(--primary-blue);
+            font-weight: 500;
+            color: var(--gray-600);
             margin-bottom: 32px;
-            box-shadow: 0 0 0 4px rgba(37,99,235,0.06), var(--shadow-sm);
+            box-shadow: var(--shadow-sm);
             animation: fadeInUp 0.6s ease;
-            letter-spacing: 0.01em;
         }
 
         .hero-badge-dot {
@@ -606,7 +587,6 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
-            align-items: stretch;
         }
 
         .service-card {
@@ -618,9 +598,6 @@
             text-align: center;
             transition: all var(--transition-base);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .service-card:hover {
@@ -685,36 +662,14 @@
             color: var(--gray-500);
             margin-bottom: 24px;
             line-height: 1.6;
-            flex: 1;
         }
 
         .service-price {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2px;
-            margin-bottom: 24px;
-            min-height: 72px;
-        }
-
-        .service-price-label {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .service-price-row {
-            display: flex;
             align-items: baseline;
-            gap: 3px;
-        }
-
-        .service-btn {
-            width: 100%;
-            margin-top: auto;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 24px;
         }
 
         .service-price-currency {
@@ -735,11 +690,7 @@
             color: var(--gray-500);
         }
 
-        .service-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 12px;
+        .service-btn {
             width: 100%;
         }
 
@@ -1197,10 +1148,6 @@
                 display: none;
             }
 
-            .service-btn {
-                width: 100% !important;
-            }
-
             .steps-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -1243,79 +1190,6 @@
                 gap: 8px;
             }
         }
-
-        /* ============================================
-           PREMIUM FINTECH ENHANCEMENTS
-        ============================================ */
-
-        /* Dot-grid background for hero section */
-        .hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: radial-gradient(circle, rgba(37,99,235,0.07) 1px, transparent 1px);
-            background-size: 32px 32px;
-            pointer-events: none;
-            z-index: 1;
-            mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
-            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
-        }
-
-        /* Shimmer line at top of page */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue), var(--primary-blue));
-            background-size: 200% 100%;
-            animation: shimmer 3s linear infinite;
-            z-index: 9999;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-
-        /* Premium card shadow on hover */
-        .trust-card:hover,
-        .service-card:hover,
-        .contact-card:hover {
-            box-shadow: 0 24px 48px -12px rgba(37,99,235,0.18);
-        }
-
-        /* Smooth reveal for service cards */
-        .service-card {
-            animation: fadeInUp 0.5s ease both;
-        }
-
-        .service-card:nth-child(1) { animation-delay: 0.05s; }
-        .service-card:nth-child(2) { animation-delay: 0.12s; }
-        .service-card:nth-child(3) { animation-delay: 0.19s; }
-        .service-card:nth-child(4) { animation-delay: 0.26s; }
-
-        /* Logo image sizing */
-        .navbar-logo .logo-icon {
-            padding: 0;
-        }
-
-        /* Navbar logo text show on mobile if logo image exists */
-        @media (max-width: 768px) {
-            .navbar-logo .logo-text {
-                display: flex;
-            }
-        }
-
-        /* Price label styling */
-        .service-price-label {
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
     </style>
 </head>
 <body>
@@ -1326,9 +1200,7 @@
     <nav class="navbar" id="navbar">
         <div class="container navbar-container">
             <a href="#" class="navbar-logo">
-                <div class="logo-icon">
-                    <img src="assets/logo.png" alt="Finsavvy Consultancy Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'logo-fallback\'>IT</span>';">
-                </div>
+                <div class="logo-icon">IT</div>
                 <div class="logo-text">
                     <span class="logo-primary">ITReturn1</span>
                     <span class="logo-secondary">Finsavvy Consultancy</span>
@@ -1356,10 +1228,7 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="hero-badge-dot"></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--primary-blue)">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                    AY 2026-27 Filing Now Open
+                    AY 2025-26 Filing Now Open
                 </div>
                 
                 <h1 class="hero-title">
@@ -1377,7 +1246,7 @@
                         </svg>
                         File My Return
                     </a>
-                    <a href="[wa.me](https://wa.me/919256551568?text=Hi%2C%20I%20want%20to%20talk%20to%20an%20expert%20about%20filing%20my%20ITR)" class="btn btn-whatsapp btn-lg" target="_blank">
+                    <a href="https://wa.me/919256551568?text=Welcome%20to%20Finsavvy%20Consultancy.%20Thank%20you%20for%20contacting%20us.%20How%20may%20we%20assist%20you%20today%3F" class="btn btn-whatsapp btn-lg" target="_blank">
                         <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                         </svg>
@@ -1500,29 +1369,23 @@
                     <h3 class="service-name">Salaried ITR Filing</h3>
                     <p class="service-description">For salaried employees with Form 16. Quick & hassle-free.</p>
                     <div class="service-price">
-                        <span class="service-price-label">Starts from</span>
-                        <div class="service-price-row">
-                            <span class="service-price-currency">₹</span>
-                            <span class="service-price-value">499</span>
-                        </div>
+                        <span class="service-price-currency">₹</span>
+                        <span class="service-price-value">499</span>
                     </div>
                     <a href="#lead-form" class="btn btn-primary service-btn">Get Started</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
                     <h3 class="service-name">Business ITR Filing</h3>
                     <p class="service-description">For freelancers, professionals & business owners.</p>
                     <div class="service-price">
-                        <span class="service-price-label">Starts from</span>
-                        <div class="service-price-row">
-                            <span class="service-price-currency">₹</span>
-                            <span class="service-price-value">749</span>
-                        </div>
+                        <span class="service-price-currency">₹</span>
+                        <span class="service-price-value">749</span>
                     </div>
                     <a href="#lead-form" class="btn btn-primary service-btn">Get Started</a>
                 </div>
@@ -1536,28 +1399,22 @@
                     <h3 class="service-name">GSTR Filing</h3>
                     <p class="service-description">Monthly GST return filing for businesses.</p>
                     <div class="service-price">
-                        <span class="service-price-label">Starts from</span>
-                        <div class="service-price-row">
-                            <span class="service-price-currency">₹</span>
-                            <span class="service-price-value">499</span>
-                        </div>
+                        <span class="service-price-currency">₹</span>
+                        <span class="service-price-value">499</span>
                     </div>
                     <a href="#lead-form" class="btn btn-primary service-btn">Get Started</a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
                     <h3 class="service-name">Refund Cases</h3>
                     <p class="service-description">Get your maximum refund with expert handling.</p>
                     <div class="service-price">
-                        <span class="service-price-label">Starts from</span>
-                        <div class="service-price-row">
-                            <span class="service-price-value" style="font-size:28px;">% based</span>
-                        </div>
+                        <span class="service-price-note">% based on refund amount</span>
                     </div>
                     <a href="#lead-form" class="btn btn-primary service-btn">Get Started</a>
                 </div>
@@ -1754,7 +1611,7 @@
                     </div>
                     <h3 class="contact-title">WhatsApp</h3>
                     <p class="contact-info">
-                        <a href="[wa.me](https://wa.me/919256551568)" target="_blank">Chat with us</a><br>
+                        <a href="https://wa.me/919256551568?text=Welcome%20to%20Finsavvy%20Consultancy.%20Thank%20you%20for%20contacting%20us.%20How%20may%20we%20assist%20you%20today%3F" target="_blank">Chat with us</a><br>
                         Quick response guaranteed
                     </p>
                 </div>
@@ -1769,9 +1626,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="logo-icon">
-                        <img src="assets/logo.png" alt="Finsavvy Consultancy Logo" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'logo-fallback\'>IT</span>';">
-                    </div>
+                    <div class="logo-icon">IT</div>
                     <div class="logo-text">
                         <span class="logo-primary">ITReturn1</span>
                         <span class="logo-secondary">Finsavvy Consultancy</span>
@@ -1779,17 +1634,17 @@
                 </div>
                 
                 <div class="footer-social">
-                    <a href="[facebook.com](https://www.facebook.com/profile.php?id=61576572226845)" class="footer-social-link" target="_blank" aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61576572226845" class="footer-social-link" target="_blank" aria-label="Facebook">
                         <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-                    <a href="[instagram.com](https://www.instagram.com/finsavvy_consultancy/)" class="footer-social-link" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/finsavvy_consultancy/" class="footer-social-link" target="_blank" aria-label="Instagram">
                         <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
                     </a>
-                    <a href="[wa.me](https://wa.me/919256551568)" class="footer-social-link" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/919256551568?text=Welcome%20to%20Finsavvy%20Consultancy.%20Thank%20you%20for%20contacting%20us.%20How%20may%20we%20assist%20you%20today%3F" class="footer-social-link" target="_blank" aria-label="WhatsApp">
                         <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                         </svg>
@@ -1809,7 +1664,7 @@
     <!-- ============================================
          FLOATING WHATSAPP BUTTON
     ============================================ -->
-    <a href="[wa.me](https://wa.me/919256551568?text=Hi%2C%20I%20want%20to%20file%20my%20ITR.%20Please%20help)" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919256551568?text=Welcome%20to%20Finsavvy%20Consultancy.%20Thank%20you%20for%20contacting%20us.%20How%20may%20we%20assist%20you%20today%3F" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <svg xmlns="[w3.org](http://www.w3.org/2000/svg)" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
@@ -1899,7 +1754,7 @@ Please connect with me.`;
             const encodedMessage = encodeURIComponent(message);
             
             // WhatsApp URL
-            const whatsappURL = `[wa.me](https://wa.me/919256551568?text=${encodedMessage})`;
+            const whatsappURL = `https://wa.me/919256551568?text=Welcome%20to%20Finsavvy%20Consultancy.%20Thank%20you%20for%20contacting%20us.%20How%20may%20we%20assist%20you%20today%3F`;
             
             // Redirect to WhatsApp
             window.open(whatsappURL, '_blank');
